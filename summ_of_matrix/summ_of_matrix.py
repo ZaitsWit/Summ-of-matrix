@@ -1,7 +1,7 @@
 line = str(input())
 matrix = []
 i = 0
-while not(line == "end"): ##while
+while not(line == "end"):
     matrix.append([])
     for j in range(len(line.split())):
         matrix[i].append(int(line.split()[j]))
@@ -29,3 +29,5 @@ for i in range(len(matrix)):
             final_matrix[i][j] += matrix[i][0]
         else:
             final_matrix[i][j] += matrix[i][j + 1]
+        print(final_matrix[i][j],  ' ', end='')
+    print('\n', end='')
