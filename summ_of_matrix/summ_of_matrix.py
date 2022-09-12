@@ -1,15 +1,17 @@
 line = str(input())
 matrix = []
-for i in range(len(line.split())): ##while
+i = 0
+while not(line == "end"): ##while
     matrix.append([])
     for j in range(len(line.split())):
         matrix[i].append(int(line.split()[j]))
 
+    i += 1
     line = str(input())
 final_matrix = []
 for i in range(len(matrix)):
     final_matrix.append([])
-    for j in range(len(matrix)):
+    for j in range(len(matrix[i])):
         final_matrix[i].append(0)
         if i > 0:
             final_matrix[i][j] += matrix[i - 1][j]
